@@ -7,39 +7,99 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
   <style>
-    .mySlides { display: none; }
-    .w3-sofia { font-family: Sofia, cursive; }
-    .w3-center { text-align: center; }
-    img { width: 80%; margin: 0 auto; display: block; }
-    summary { cursor: pointer; border: 1px solid #ccc; padding: 10px; position: relative; }
+    body {
+      background-color: #9766ff; /* Fondo de la página */
+      color: #333;
+      font-family: Arial, sans-serif;
+    }
+
+    .mySlides { 
+      display: none; 
+    }
+
+    .w3-sofia { 
+      font-family: Sofia, cursive; 
+    }
+
+    .w3-center { 
+      text-align: center; 
+    }
+
+    img { 
+      width: 60%; /* Reducción del tamaño del logo */
+      margin: 0 auto; 
+      display: block; 
+      padding-bottom: 30px ;
+    }
+
+    summary { 
+      
+      cursor: pointer; 
+      border: 1px solid #ccc; 
+      padding: 10px; 
+      position: relative; 
+      background-color: #ffc3e9; /* Color de fondo para los summary */
+      border-radius: 5px; 
+      margin:  0; 
+    }
+
+    details > div {
+      background-color: #a798c9; /* Cambia este color según prefieras */
+      border-radius: 10px; /* Opcional */
+      padding: 10px; /* Opcional */
+    }
+
     h2.glitter {
       position: relative;
       font-size: 3em;
       text-align: center;
       color: #fff;
-      background-image: linear-gradient(to right, #ff00cc, #3333ff, #00ffcc);
+      background-image: linear-gradient(to right, #ff00cc, #ffffff, #00ffcc,#eeff00);
       background-size: 200% auto;
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: shine 5s linear infinite;
     }
+
     @keyframes shine {
       to {
         background-position: 200% center;
       }
     }
+
+    /* Estilo del botón para cerrar todos los summary */
+    #close-all {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ff66c4;
+      color: white;
+      width: 60px; /* Ancho y alto iguales para hacer el botón cuadrado */
+      height: 60px;
+      padding: 0; /* Eliminar padding interno */
+      border: none;
+      border-radius: 15px; /* Borde redondeado para darle un toque suave */
+      cursor: pointer;
+      font-size: 24px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      display: none; /* Ocultar inicialmente */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
   </style>
 </head>
 <body>
-<div class="">
+  <div>
     <h2 class="glitter w3-center w3-sofia w3-animate-top w3-animate-zoom">Menu</h2>
 
-    <img src="assets/LOGO - HAPPY CREAM.png" type="image/x-icon">
-    
-    
+    <img src="assets/LOGO - HAPPY CREAM.png" alt="Logo Happy Cream">
+
     <details>
-      <summary class="">Yogurt Griego</summary>
+      <summary>Yogurt Griego</summary>
       <div class="w3-content w3-display-container">
         <img class="mySlides" src="assets/1.png">
         <img class="mySlides" src="assets/3.png">
@@ -50,91 +110,100 @@
       </div>
     </details>
     <details>
-      <summary class="">Fresas Con Crema</summary>
+      <summary>Fresas Con Crema</summary>
       <div class="w3-content w3-display-container">
-        <img class="" src="assets/2.png">
-       
-    
-        
+        <img class="mySlides1" src="assets/2.png">
+        <img class="mySlides1" src="assets/4.png">
+
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs1(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs1(1)">&#10095;</button>
       </div>
-  </details>
-    
-    <details>
-        <summary class="">Waffles</summary>
-        <div class="w3-content w3-display-container">
-          
-          <img class="mySlides2" src="assets/waffle.png">
-          <img class="mySlides2" src="assets/waffle_frutal.png">
-      
-          <button class="w3-button w3-black w3-display-left" onclick="plusDivs2(-1)">&#10094;</button>
-          <button class="w3-button w3-black w3-display-right" onclick="plusDivs2(1)">&#10095;</button>
-        </div>
     </details>
     
     <details>
-        <summary class="">Sandwich</summary>
-        <div class="w3-content w3-display-container">
-          <img class="mySlides3" src="assets/sandwich.png">
-         
+      <summary>Waffles</summary>
+      <div class="w3-content w3-display-container">
+        <img class="mySlides2" src="assets/waffle.png">
+        <img class="mySlides2" src="assets/waffle_frutal.png">
+        <img class="mySlides2" src="assets/10.png">
       
-          <button class="w3-button w3-black w3-display-left" onclick="plusDivs3(-1)">&#10094;</button>
-          <button class="w3-button w3-black w3-display-right" onclick="plusDivs3(1)">&#10095;</button>
-        </div>
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs2(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs2(1)">&#10095;</button>
+      </div>
     </details>
-    <!-- <details>
-        <summary class="">Obleas</summary>
-        <div class="w3-content w3-display-container">
-          <img class="" src="assets/obleas.png">
-         
-      
-          
-        </div>
-    </details> -->
+    
     <details>
-        <summary class="">Bebidas</summary>
-        <div class="w3-content w3-display-container">
-          <img class="" src="assets/bebidas.png">
-         
+      <summary>Sandwich</summary>
+      <div class="w3-content w3-display-container">
+        <img class="mySlides3" src="assets/sandwich.png">
       
-          
-        </div>
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs3(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs3(1)">&#10095;</button>
+      </div>
     </details>
+
     <details>
-        <summary class="">Transferencias</summary>
-        <div class="w3-content w3-display-container">
-          <img class="mySlides4" src="assets/banco.png">
-          <img class="mySlides4" src="assets/nequi.png">
-         
-      
-          <button class="w3-button w3-black w3-display-left" onclick="plusDivs4(-1)">&#10094;</button>
-          <button class="w3-button w3-black w3-display-right" onclick="plusDivs4(1)">&#10095;</button>
-        </div>
+      <summary>Bebidas</summary>
+      <div class="w3-content w3-display-container">
+        <img src="assets/bebidas.png">
+      </div>
     </details>
-</div>
 
+    <details>
+      <summary>Transferencias</summary>
+      <div class="w3-content w3-display-container">
+        <img class="mySlides4" src="assets/banco.png">
+        <img class="mySlides4" src="assets/nequi.png">
+      
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs4(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs4(1)">&#10095;</button>
+      </div>
+    </details>
+  </div>
 
+  <!-- Botón para cerrar todos los summary -->
+  <button id="close-all" onclick="closeAllSummaries()">×</button>
 
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) { slideIndex = 1; }
-  if (n < 1) { slideIndex = x.length; }
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-</script>
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) { slideIndex = 1; }
+      if (n < 1) { slideIndex = x.length; }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+  </script>
+  <script>
+    var slideIndex1 = 1;
+    showDivs1(slideIndex1);
+  
+    function plusDivs1(n) {
+      showDivs1(slideIndex1 += n);
+    }
+  
+    function showDivs1(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides1");
+      if (n > x.length) { slideIndex1 = 1; }
+      if (n < 1) { slideIndex1 = x.length; }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex1-1].style.display = "block";  
+    }
+  </script>
 
-<script>
+  <script>
     var slideIndex2 = 1;
     showDivs2(slideIndex2);
     
@@ -152,9 +221,9 @@ function showDivs(n) {
       }
       x[slideIndex2-1].style.display = "block";  
     }
-    </script>
+  </script>
 
-<script>
+  <script>
     var slideIndex3 = 1;
     showDivs3(slideIndex3);
     
@@ -172,25 +241,54 @@ function showDivs(n) {
       }
       x[slideIndex3-1].style.display = "block";  
     }
-    </script>
-    <script>
-        var slideIndex4 = 1;
-        showDivs3(slideIndex4);
-        
-        function plusDivs4(n) {
-          showDivs4(slideIndex4 += n);
-        }
-        
-        function showDivs4(n) {
-          var i;
-          var x = document.getElementsByClassName("mySlides4");
-          if (n > x.length) { slideIndex4 = 1; }
-          if (n < 1) { slideIndex4 = x.length; }
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  
-          }
-          x[slideIndex4-1].style.display = "block";  
-        }
-        </script>
+  </script>
+
+  <script>
+    var slideIndex4 = 1;
+    showDivs4(slideIndex4);
+  
+    function plusDivs4(n) {
+      showDivs4(slideIndex4 += n);
+    }
+  
+    function showDivs4(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides4");
+      if (n > x.length) { slideIndex4 = 1; }
+      if (n < 1) { slideIndex4 = x.length; }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex4-1].style.display = "block";  
+    }
+  </script>
+
+  <script>
+    function closeAllSummaries() {
+      var summaries = document.querySelectorAll("details[open]");
+      summaries.forEach(function(summary) {
+        summary.removeAttribute("open");
+      });
+      toggleCloseButton(); // Ocultar el botón después de cerrar los summaries
+    }
+
+    function toggleCloseButton() {
+      var summaries = document.querySelectorAll("details[open]");
+      var closeButton = document.getElementById("close-all");
+      if (summaries.length > 0) {
+        closeButton.style.display = "flex"; // Mostrar el botón cuando haya summaries abiertos
+      } else {
+        closeButton.style.display = "none"; // Ocultar el botón cuando no haya summaries abiertos
+      }
+    }
+
+    // Añadir un evento para mostrar el botón cuando se abre un summary
+    document.querySelectorAll("summary").forEach(function(summary) {
+      summary.addEventListener("click", function() {
+        setTimeout(toggleCloseButton, 100); // Esperar un momento para verificar el estado de los summaries
+      });
+    });
+  </script>
+
 </body>
 </html>
