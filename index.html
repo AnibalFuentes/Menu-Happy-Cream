@@ -119,6 +119,16 @@
         <button class="w3-button w3-black w3-display-right" onclick="plusDivs1(1)">&#10095;</button>
       </div>
     </details>
+    <details>
+      <summary>Micheladas Frutales</summary>
+      <div class="w3-content w3-display-container">
+        <img class="mySlides5" src="assets/miche.png">
+        <!-- <img class="mySlides1" src="assets/4.png"> -->
+
+        <!-- <button class="w3-button w3-black w3-display-left" onclick="plusDivs1(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs1(1)">&#10095;</button> -->
+      </div>
+    </details>
     
     <details>
       <summary>Waffles</summary>
@@ -260,6 +270,25 @@
         x[i].style.display = "none";  
       }
       x[slideIndex4-1].style.display = "block";  
+    }
+  </script>
+  <script>
+    var slideIndex5 = 1;
+    showDivs5(slideIndex5);
+  
+    function plusDivs5(n) {
+      showDivs5(slideIndex5 += n);
+    }
+  
+    function showDivs5(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides5");
+      if (n > x.length) { slideIndex5 = 1; }
+      if (n < 1) { slideIndex5 = x.length; }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex5-1].style.display = "block";  
     }
   </script>
 
